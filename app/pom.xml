@@ -1,0 +1,19 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.app.gh</groupId>
+	<artifactId>my-gh</artifactId>
+	<version>1.0.0</version>
+	<packaging>pom</packaging>
+	<name>app-gh</name>
+	<description>apps for record transaction and journal</description>
+	
+	<modules>
+		<module>my-gh-core</module>
+		<module>my-gh-persistence</module>
+		<module>my-gh-service</module>
+		<module>my-gh-endpoint</module>
+	</modules>
+	
+</project>
