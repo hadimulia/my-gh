@@ -22,8 +22,8 @@ import com.app.generic.persistence.model.GenericModel;
 /**
  * GenericDao using for transaction between application and database.
  * 
- * @author M Lukmanul Hakim (m.hakim &copy;Jan 17, 2019) <br>
- *         for further info contact: <i>vickyhakimm@gmail.com</i>
+ * @author Taufik Muliahadi (taufik.m &copy;Jan 17, 2019) <br>
+ *         for further info contact: <i>kotaksurat.taufik@gmail.com</i>
  * @param <M>
  * @param <ID>
  */
@@ -53,8 +53,6 @@ public interface GenericDao<M extends GenericModel, ID extends Serializable> {
 	 * contain page & pageSize. Start page position from 1. <br>
 	 * Custom Parameter declare on Map&lt;String, Object&gt; for the parameter
 	 *
-	 * @author M Lukmanul Hakim (m.hakim &copy;Jan 16, 2019) <br>
-	 *         for further info contact: <i>vickyhakimm@gmail.com</i>
 	 * @param firstResult
 	 * @param maxResult
 	 * @param parameters
@@ -72,8 +70,6 @@ public interface GenericDao<M extends GenericModel, ID extends Serializable> {
 	/**
 	 * Find All with filter, between range, and paging.
 	 *
-	 * @author M Lukmanul Hakim (m.hakim &copy;Jan 17, 2019) <br>
-	 *         for further info contact: <i>vickyhakimm@gmail.com</i>
 	 * @param firstResult
 	 * @param maxResult
 	 * @param parameters

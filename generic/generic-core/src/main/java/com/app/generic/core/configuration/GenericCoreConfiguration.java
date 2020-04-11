@@ -11,7 +11,7 @@ import com.fasterxml.jackson.databind.MapperFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 @Configuration
-@ComponentScan("com.anabatic.generic.core.util")
+@ComponentScan("com.app.generic.core.util")
 public class GenericCoreConfiguration {
 	@Bean
 	public ModelMapper modelMapper() {

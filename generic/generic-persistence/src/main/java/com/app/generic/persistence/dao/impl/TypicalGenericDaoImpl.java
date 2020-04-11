@@ -20,8 +20,7 @@ import com.app.generic.persistence.model.TypicalGenericModel;
 /**
  * DAO that have a Client Id inside the model
  * 
- * @author M Lukmanul Hakim (m.hakim &copy;Sep 24, 2018) <br>
- *         for further info contact: <i>vickyhakimm@gmail.com</i>
+ * @author Taufik Muliahadi (taufik.m &copy;Sep 24, 2018) <br>
  * @param <ENTITY> Entity Class
  * @param <ID> Type Data for Primary Key
  */
@@ -30,10 +29,8 @@ public abstract class TypicalGenericDaoImpl<ENTITY extends TypicalGenericModel, 
 		extends GenericDaoImpl<ENTITY, ID> implements TypicalGenericDao<ENTITY, ID> {
 
 	/*
-	 * getting list object from clientId
+	 * getting list object from storeId
 	 *
-	 * @author M Lukmanul Hakim (m.hakim &copy;Sep 24, 2018) <br>for further info
-	 * contact: <i>vickyhakimm@gmail.com</i>
 	 * 
 	 * @see
 	 * com.anabatic.tpe.generic.persistence.dao.TypicalGenericDao#getByClientId(java
@@ -41,33 +38,30 @@ public abstract class TypicalGenericDaoImpl<ENTITY extends TypicalGenericModel, 
 	 */
 	@SuppressWarnings("unchecked")
 	@Override
-	public List<ENTITY> getByClientId(String clientId) {
+	public List<ENTITY> getByStoreId(String storeId) {
 		Query query = super.entityManager.createQuery(
-				"Select entity FROM " + getEntityClass().getSimpleName() + " entity where clientId =:clientId");
-		query.setParameter("clientId", clientId);
+				"Select entity FROM " + getEntityClass().getSimpleName() + " entity where storeId =:storeId");
+		query.setParameter("storeId", storeId);
 
 		return query.getResultList();
 	}
 
 	/*
-	 * getting list object from clientId & custom parameter
+	 * getting list object from storeId & custom parameter
 	 *
-	 * @author M Lukmanul Hakim (m.hakim &copy;Sep 24, 2018) <br>for further info
-	 * contact: <i>vickyhakimm@gmail.com</i>
-	 * 
 	 * @see com.anabatic.tpe.generic.persistence.dao.TypicalGenericDao#
 	 * getByClientIdAndObject(java.lang.String, java.util.Map)
 	 */
 	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@Override
-	public List<ENTITY> getByClientIdAndObject(String clientId, Map<String, Object> obj) {
+	public List<ENTITY> getByStoreIdAndObject(String storeId, Map<String, Object> obj) {
 		try {
 			List<Predicate> predicates = new ArrayList<>();
 			CriteriaBuilder qb = super.entityManager.getCriteriaBuilder();
 			CriteriaQuery cq = qb.createQuery();
 			Root<ENTITY> clazz = cq.from(super.getEntityClass());
 
-			predicates.add(qb.equal(clazz.get("clientId"), clientId));
+			predicates.add(qb.equal(clazz.get("storeId"), storeId));
 			if (obj != null && !obj.isEmpty()) {
 				for (Entry<String, Object> param : obj.entrySet()) {
 					predicates.add(qb.equal(clazz.get(param.getKey()), param.getValue()));
@@ -81,16 +75,13 @@ public abstract class TypicalGenericDaoImpl<ENTITY extends TypicalGenericModel, 
 	}
 
 	/*
-	 * getting list object paging from clientId & custom parameter
+	 * getting list object paging from storeId & custom parameter
 	 *
-	 * @author M Lukmanul Hakim (m.hakim &copy;Jan 15, 2019) <br>for further info
-	 * contact: <i>vickyhakimm@gmail.com</i>
-	 * 
 	 * @see com.anabatic.tpe.generic.persistence.dao.TypicalGenericDao#
 	 * getByClientIdAndObject(java.lang.String, java.util.Map)
 	 */
 	@Override
-	public List<ENTITY> getByClientIdAndObject(String clientId, Map<String, Object> obj, Integer firstResult,
+	public List<ENTITY> getByStoreIdAndObject(String storeId, Map<String, Object> obj, Integer firstResult,
 			Integer maxResult) {
 		try {
 			CriteriaBuilder qb = super.entityManager.getCriteriaBuilder();
@@ -98,7 +89,7 @@ public abstract class TypicalGenericDaoImpl<ENTITY extends TypicalGenericModel, 
 			List<Predicate> predicates = new ArrayList<>();
 			Root<ENTITY> clazz = cq.from(super.getEntityClass());
 
-			predicates.add(qb.equal(clazz.get("clientId"), clientId));
+			predicates.add(qb.equal(clazz.get("storeId"), storeId));
 			if (obj != null && !obj.isEmpty()) {
 				for (Entry<String, Object> param : obj.entrySet()) {
 					predicates.add(qb.equal(clazz.get(param.getKey()), param.getValue()));
