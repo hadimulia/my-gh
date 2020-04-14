@@ -1,20 +1,20 @@
 package com.app.gh.persistence.dto;
 
 import com.app.generic.persistence.annotation.IsRequired;
-import com.app.gh.core.enums.CoaTypeEnum;
 
-public class CoaDto {
+public class TransactionCodeDto {
 
+	
 	private Long id;
-	
+
 	@IsRequired
-	private String coaCode;
-	
+	private String trxCode;
+
 	@IsRequired
 	private String description;
 	
 	@IsRequired
-	private CoaTypeEnum coaType;
+	private Long coaId;
 	
 	@IsRequired
 	private String storeId;
@@ -27,12 +27,12 @@ public class CoaDto {
 		this.id = id;
 	}
 
-	public String getCoaCode() {
-		return coaCode;
+	public String getTrxCode() {
+		return trxCode;
 	}
 
-	public void setCoaCode(String coaCode) {
-		this.coaCode = coaCode;
+	public void setTrxCode(String trxCode) {
+		this.trxCode = trxCode;
 	}
 
 	public String getDescription() {
@@ -43,12 +43,12 @@ public class CoaDto {
 		this.description = description;
 	}
 
-	public CoaTypeEnum getCoaType() {
-		return coaType;
+	public Long getCoaId() {
+		return coaId;
 	}
 
-	public void setCoaType(CoaTypeEnum coaType) {
-		this.coaType = coaType;
+	public void setCoaId(Long coaId) {
+		this.coaId = coaId;
 	}
 
 	public String getStoreId() {
@@ -61,9 +61,8 @@ public class CoaDto {
 
 	@Override
 	public String toString() {
-		return "CoaDto [id=" + id + ", coaCode=" + coaCode + ", description=" + description + ", coaType=" + coaType
-				+ ", storeId=" + storeId + "]";
+		return "TransactionCodeDto [id=" + id + ", trxCode=" + trxCode + ", description=" + description + ", coaId="
+				+ coaId + ", storeId=" + storeId + "]";
 	}
-	
-	
+
 }

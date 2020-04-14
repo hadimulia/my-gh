@@ -6,6 +6,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
@@ -34,6 +35,10 @@ public class OrderDetail extends GenericModel{
 	
 	@Column(name = "qty_sent")
 	private Long qtySent;
+	
+	@ManyToOne
+	@JoinColumn(name = "order_id")
+	private Order order;
 
 	public Long getId() {
 		return id;

@@ -1,10 +1,14 @@
 package com.app.gh.persistence.model;
 
+import java.util.Set;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import com.app.generic.persistence.model.TypicalGenericModel;
@@ -32,6 +36,9 @@ public class Order extends TypicalGenericModel{
 	
 	@Column(name = "term")
 	private Long term;
+	
+	@OneToMany(fetch = FetchType.LAZY,mappedBy = "order")
+	private Set<OrderDetail> orderDetails;
 	
 	public Long getId() {
 		return id;

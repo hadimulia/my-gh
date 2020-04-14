@@ -27,7 +27,6 @@ public class TransactionCode extends TypicalGenericModel{
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
 
 	@Column(name = "trx_code")
 	private String trxCode;

@@ -8,7 +8,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Index;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 import com.app.generic.persistence.model.TypicalGenericModel;
@@ -53,7 +53,7 @@ public class Stock extends TypicalGenericModel{
 	@Column(name = "stock_status")
 	private StockStatusEnum stockStatus;
 	
-	@ManyToOne(fetch = FetchType.LAZY)
+	@OneToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "suplier_id")
 	private Suplier suplier;
 
