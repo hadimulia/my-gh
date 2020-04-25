@@ -1,4 +1,4 @@
-package com.anabatic.generic.endpoint.contract;
+package com.app.generic.endpoint.contract;
 
 import java.io.Serializable;
 import java.util.List;

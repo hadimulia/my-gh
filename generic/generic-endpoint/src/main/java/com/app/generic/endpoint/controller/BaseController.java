@@ -1,10 +1,10 @@
-package com.anabatic.generic.endpoint.controller;
+package com.app.generic.endpoint.controller;
 
 import java.io.Serializable;
 
 import org.springframework.http.ResponseEntity;
 
-import com.anabatic.generic.endpoint.contract.BaseResponse;
+import com.app.generic.endpoint.contract.BaseResponse;
 
 /**
  * This class for refrence base controller using library JAX-RS

@@ -16,4 +16,8 @@
 		<module>my-gh-endpoint</module>
 	</modules>
 	
+	<properties>
+		<java.version>1.8</java.version>
+	</properties>
+	
 </project>

@@ -10,7 +10,6 @@ import com.app.generic.persistence.model.TypicalGenericModel;
  * Interface DAO that have a Store Id inside the model
  * 
  * @author Taufik Muliahadi(taufik.m &copy;Sep 24, 2018) 
- * <br>for further info contact: <i>kotaksurat.taufik@gmail.com</i>
  * @param <M>
  * @param <ID>
  */

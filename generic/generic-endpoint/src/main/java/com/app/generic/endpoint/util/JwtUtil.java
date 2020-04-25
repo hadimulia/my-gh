@@ -1,4 +1,4 @@
-package com.anabatic.generic.endpoint.util;
+package com.app.generic.endpoint.util;
 
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtBuilder;

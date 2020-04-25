@@ -1,4 +1,4 @@
-package com.anabatic.generic.endpoint.controller;
+package com.app.generic.endpoint.controller;
 
 import java.io.Serializable;
 import java.util.Map;

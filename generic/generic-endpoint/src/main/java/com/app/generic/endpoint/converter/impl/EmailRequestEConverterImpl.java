@@ -1,10 +1,10 @@
-package com.anabatic.generic.endpoint.converter.impl;
+package com.app.generic.endpoint.converter.impl;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import com.anabatic.generic.endpoint.contract.EmailRequest;
-import com.anabatic.generic.endpoint.converter.EmailRequestEConverter;
+import com.app.generic.endpoint.contract.EmailRequest;
+import com.app.generic.endpoint.converter.EmailRequestEConverter;
 import com.app.generic.persistence.dto.EmailDto;
 
 public class EmailRequestEConverterImpl implements EmailRequestEConverter{

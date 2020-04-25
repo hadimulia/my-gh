@@ -1,4 +1,4 @@
-package com.anabatic.generic.endpoint;
+package com.app.generic.endpoint;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,9 +8,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 
-import com.anabatic.generic.endpoint.contract.BaseResponse;
 import com.app.generic.core.constant.ErrorConstant;
 import com.app.generic.core.exception.GeneralException;
+import com.app.generic.endpoint.contract.BaseResponse;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException;
@@ -19,9 +19,7 @@ import com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException;
  * Controller advice to handle thrown exceptions: {@link TpeException},
  * {@link GeneralException}
  * 
- * @author kusmawati
- * @author M Lukmanul Hakim (m.hakim &copy;Jan 22, 2019) <br>
- *         for further info contact: <i>vickyhakimm@gmail.com</i>
+ * @author Taufik Muliahadi (taufik.m &copy;Jan 22, 2019) <br>
  **/
 @ControllerAdvice
 public class GenericControllerAdvice {

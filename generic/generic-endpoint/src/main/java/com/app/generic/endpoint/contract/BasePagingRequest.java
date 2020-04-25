@@ -1,4 +1,4 @@
-package com.anabatic.generic.endpoint.contract;
+package com.app.generic.endpoint.contract;
 
 import com.app.generic.persistence.annotation.PositiveNumber;
 import com.app.generic.persistence.enums.Order;

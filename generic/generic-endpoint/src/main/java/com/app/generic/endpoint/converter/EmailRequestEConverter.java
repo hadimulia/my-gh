@@ -1,6 +1,6 @@
-package com.anabatic.generic.endpoint.converter;
+package com.app.generic.endpoint.converter;
 
-import com.anabatic.generic.endpoint.contract.EmailRequest;
+import com.app.generic.endpoint.contract.EmailRequest;
 import com.app.generic.persistence.dto.EmailDto;
 import com.app.generic.service.converter.ToDtoConverter;
 

@@ -1,4 +1,4 @@
-package com.anabatic.generic.endpoint.contract;
+package com.app.generic.endpoint.contract;
 
 /**
  * @author heri.purwanto

@@ -12,7 +12,6 @@ public class StoreDto {
 	@IsRequired
 	private String fullAddress;
 
-	@IsRequired
 	private String logo;
 
 	public Long getId() {

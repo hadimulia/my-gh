@@ -13,8 +13,7 @@ import com.app.generic.persistence.model.GenericModel;
 /**
  * Object formatting
  * 
- * @author M Lukmanul Hakim (m.hakim &copy;Dec 7, 2018) <br>
- *         for further info contact: <i>vickyhakimm@gmail.com</i>
+ * @author Taufik Muliahadi (taufik.muliahadi &copy;Dec 7, 2018) <br>
  *
  */
 public class ObjectUtil {
@@ -45,8 +44,6 @@ public class ObjectUtil {
 	/**
 	 * Return field object that you find.
 	 *
-	 * @author M Lukmanul Hakim (m.hakim &copy;Dec 14, 2018) <br>
-	 *         for further info contact: <i>vickyhakimm@gmail.com</i>
 	 * @param obj   the object that you want to find.
 	 * @param field name on the object.
 	 * @return
@@ -66,8 +63,6 @@ public class ObjectUtil {
 	/**
 	 * Getting Identity on the argument object that have &#64;Param
 	 *
-	 * @author M Lukmanul Hakim (m.hakim &copy;Dec 10, 2018) <br>
-	 *         for further info contact: <i>vickyhakimm@gmail.com</i>
 	 * @param obj
 	 * @return
 	 * @throws IllegalArgumentException
@@ -94,8 +89,6 @@ public class ObjectUtil {
 	/**
 	 * Getting Identity on the argument object that have &#64;Param
 	 *
-	 * @author M Lukmanul Hakim (m.hakim &copy;Dec 10, 2018) <br>
-	 *         for further info contact: <i>vickyhakimm@gmail.com</i>
 	 * @param obj
 	 * @return
 	 * @throws IllegalArgumentException
@@ -117,8 +110,6 @@ public class ObjectUtil {
 	/**
 	 * Getting Identity on the argument object that have &#64;Param
 	 *
-	 * @author M Lukmanul Hakim (m.hakim &copy;Dec 10, 2018) <br>
-	 *         for further info contact: <i>vickyhakimm@gmail.com</i>
 	 * @param obj
 	 * @return
 	 * @throws IllegalArgumentException
