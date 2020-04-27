@@ -9,14 +9,14 @@
 	<!-- Service -->
 	<bean id="coaService" class="com.app.gh.service.service.impl.CoaServiceImpl" />
 	<bean id="storeService" class="com.app.gh.service.service.impl.StoreServiceImpl" />
+	<bean id="stockService" class="com.app.gh.service.service.impl.StockServiceImpl" />
+	<bean id="suplierService" class="com.app.gh.service.service.impl.SuplierServiceImpl" />
 	<!-- 
-	<bean id="customerDao" class="com.app.gh.persistence.dao.impl.CustomerDaoImpl" />
-	<bean id="orderDao" class="com.app.gh.persistence.dao.impl.OrderDaoImpl" />
-	<bean id="sellerDao" class="com.app.gh.persistence.dao.impl.SellerDaoImpl" />
-	<bean id="stockDao" class="com.app.gh.persistence.dao.impl.StockDaoImpl" />
-	<bean id="suplierDao" class="com.app.gh.persistence.dao.impl.SuplierDaoImpl" />
-	<bean id="transactionCodeDao" class="com.app.gh.persistence.dao.impl.TransactionCodeDaoImpl" />
-	<bean id="transactionDao" class="com.app.gh.persistence.dao.impl.TransactionDaoImpl" />
+	<bean id="customerService" class="com.app.gh.service.service.impl.CustomerServiceImpl" />
+	<bean id="orderService" class="com.app.gh.service.service.impl.OrderServiceImpl" />
+	<bean id="sellerService" class="com.app.gh.service.service.impl.SellerServiceImpl" />
+	<bean id="transactionCodeService" class="com.app.gh.service.service.impl.TransactionCodeServiceImpl" />
+	<bean id="transactionService" class="com.app.gh.service.service.impl.TransactionServiceImpl" />
 	-->
 	
 	

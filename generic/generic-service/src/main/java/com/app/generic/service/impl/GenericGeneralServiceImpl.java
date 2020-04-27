@@ -1,8 +1,3 @@
-/*
-* ATI - CORE -TPE
-* Transaction Processing Engine(TPE)
-* @Author- V.N.V.L.PRASANNA 
-*/
 package com.app.generic.service.impl;
 
 import java.io.Serializable;

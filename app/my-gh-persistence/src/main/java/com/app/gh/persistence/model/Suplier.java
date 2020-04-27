@@ -73,7 +73,7 @@ public class Suplier extends TypicalGenericModel {
 	@Override
 	public String toString() {
 		return "Suplier [id=" + id + ", suplierName=" + suplierName + ", fullAddress=" + fullAddress + ", stock="
-				+ stock + ", storeId=" + storeId + "]";
+				+ stock + "]";
 	}
 
 	@Override

@@ -15,15 +15,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.app.generic.endpoint.contract.BaseResponse;
 import com.app.generic.persistence.validator.field.ValidationCheck;
-import com.app.gh.persistence.dto.CoaDto;
-import com.app.gh.service.service.CoaService;
+import com.app.gh.persistence.dto.SuplierDto;
+import com.app.gh.service.service.SuplierService;
 
 @Controller
-@RequestMapping("/coa")
-public class CoaController {
+@RequestMapping("/suplier")
+public class SuplierController {
 
 	@Autowired
-	private CoaService service;
+	private SuplierService service;
 	
 	@Value("${spring.application.name}")
     String appName;
@@ -35,12 +35,12 @@ public class CoaController {
     }
 
 	@PostMapping("/save")
-	public ResponseEntity<BaseResponse> save(@RequestBody CoaDto request) {
+	public ResponseEntity<BaseResponse> save(@RequestBody SuplierDto request) {
 		if (request != null) {
 			ValidationCheck.hasValidate(request);
 		}
 
-		CoaDto dto = service.save(request);
+		SuplierDto dto = service.save(request);
 
 		BaseResponse baseResponse = new BaseResponse();
 		baseResponse.setResponse(dto);
@@ -61,7 +61,7 @@ public class CoaController {
 	@PostMapping("/get/{id}")
 	public ResponseEntity<BaseResponse> get(@PathVariable("id") Long id) {
 
-		CoaDto dto = service.getById(id);
+		SuplierDto dto = service.getById(id);
 
 		BaseResponse baseResponse = new BaseResponse();
 		baseResponse.setResponse(dto);
@@ -72,7 +72,7 @@ public class CoaController {
 	@PostMapping("/store/{storeId}")
 	public ResponseEntity<BaseResponse> getByStoreId(@PathVariable("storeId") Long storeId) {
 
-		Set<CoaDto> list = service.getByStoreId(storeId);
+		Set<SuplierDto> list = service.getByStoreId(storeId);
 		BaseResponse baseResponse = new BaseResponse();
 		baseResponse.setResponse(list);
 		return ResponseEntity.ok().body(baseResponse);

@@ -65,6 +65,21 @@ public class Stock extends TypicalGenericModel{
 		this.id = id;
 	}
 
+	public String getCode() {
+		return code;
+	}
+
+	public void setCode(String code) {
+		this.code = code;
+	}
+
+	public StockStatusEnum getStockStatus() {
+		return stockStatus;
+	}
+
+	public void setStockStatus(StockStatusEnum stockStatus) {
+		this.stockStatus = stockStatus;
+	}
 
 	public String getName() {
 		return name;
@@ -108,19 +123,20 @@ public class Stock extends TypicalGenericModel{
 
 	@Override
 	public String toString() {
-		return "Stock [id=" + id + ", name=" + name + ", unit=" + unit + ", qty=" + qty
-				+ ", price=" + price + ", suplier=" + suplier + "]";
+		return "Stock [id=" + id + ", name=" + name + ", code=" + code + ", unit=" + unit + ", qty=" + qty + ", price="
+				+ price + ", stockStatus=" + stockStatus  + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((code == null) ? 0 : code.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
 		result = prime * result + ((name == null) ? 0 : name.hashCode());
 		result = prime * result + ((price == null) ? 0 : price.hashCode());
 		result = prime * result + ((qty == null) ? 0 : qty.hashCode());
-		result = prime * result + ((suplier == null) ? 0 : suplier.hashCode());
+		result = prime * result + ((stockStatus == null) ? 0 : stockStatus.hashCode());
 		result = prime * result + ((unit == null) ? 0 : unit.hashCode());
 		return result;
 	}
@@ -134,6 +150,11 @@ public class Stock extends TypicalGenericModel{
 		if (getClass() != obj.getClass())
 			return false;
 		Stock other = (Stock) obj;
+		if (code == null) {
+			if (other.code != null)
+				return false;
+		} else if (!code.equals(other.code))
+			return false;
 		if (id == null) {
 			if (other.id != null)
 				return false;
@@ -154,6 +175,8 @@ public class Stock extends TypicalGenericModel{
 				return false;
 		} else if (!qty.equals(other.qty))
 			return false;
+		if (stockStatus != other.stockStatus)
+			return false;
 		if (suplier == null) {
 			if (other.suplier != null)
 				return false;
@@ -163,7 +186,6 @@ public class Stock extends TypicalGenericModel{
 			return false;
 		return true;
 	}
-	
 	
 	
 }

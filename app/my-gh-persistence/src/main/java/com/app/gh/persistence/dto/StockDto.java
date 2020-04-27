@@ -25,9 +25,13 @@ public class StockDto {
 
 	@IsRequired
 	private StockStatusEnum stockStatus;
+
+	@IsRequired
+	private Long suplierId;
 	
 	@IsRequired
 	private String storeId;
+	
 
 	public Long getId() {
 		return id;
@@ -93,11 +97,22 @@ public class StockDto {
 		this.storeId = storeId;
 	}
 
+	public Long getSuplierId() {
+		return suplierId;
+	}
+
+	public void setSuplierId(Long suplierId) {
+		this.suplierId = suplierId;
+	}
+
 	@Override
 	public String toString() {
 		return "StockDto [id=" + id + ", name=" + name + ", code=" + code + ", unit=" + unit + ", qty=" + qty
-				+ ", price=" + price + ", stockStatus=" + stockStatus + ", storeId=" + storeId + "]";
+				+ ", price=" + price + ", stockStatus=" + stockStatus + ", suplierId=" + suplierId + ", storeId="
+				+ storeId + "]";
 	}
+
+	
 	
 	
 }
