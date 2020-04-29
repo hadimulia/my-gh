@@ -13,7 +13,7 @@ import com.app.generic.persistence.model.TypicalGenericModel;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @Entity
-@Table(name = "tbl_seller")
+@Table(name = "tbl_customer")
 @JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Customer extends TypicalGenericModel{
 
@@ -27,8 +27,8 @@ public class Customer extends TypicalGenericModel{
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 	
-	@Column(name = "seller_name", length = 50,nullable = false)
-	private String sellerName;
+	@Column(name = "customer_name", length = 50,nullable = false)
+	private String customerName;
 	
 	@Column(name = "full_address")
 	@Type(type = "text")
@@ -42,12 +42,12 @@ public class Customer extends TypicalGenericModel{
 		this.id = id;
 	}
 
-	public String getSellerName() {
-		return sellerName;
+	public String getCustomerName() {
+		return customerName;
 	}
 
-	public void setSellerName(String sellerName) {
-		this.sellerName = sellerName;
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
 	}
 
 	public String getFullAddress() {
@@ -60,16 +60,16 @@ public class Customer extends TypicalGenericModel{
 
 	@Override
 	public String toString() {
-		return "Customer [id=" + id + ", sellerName=" + sellerName + ", fullAddress=" + fullAddress + "]";
+		return "Customer [id=" + id + ", customerName=" + customerName + ", fullAddress=" + fullAddress + "]";
 	}
 
 	@Override
 	public int hashCode() {
 		final int prime = 31;
 		int result = 1;
+		result = prime * result + ((customerName == null) ? 0 : customerName.hashCode());
 		result = prime * result + ((fullAddress == null) ? 0 : fullAddress.hashCode());
 		result = prime * result + ((id == null) ? 0 : id.hashCode());
-		result = prime * result + ((sellerName == null) ? 0 : sellerName.hashCode());
 		return result;
 	}
 
@@ -82,6 +82,11 @@ public class Customer extends TypicalGenericModel{
 		if (getClass() != obj.getClass())
 			return false;
 		Customer other = (Customer) obj;
+		if (customerName == null) {
+			if (other.customerName != null)
+				return false;
+		} else if (!customerName.equals(other.customerName))
+			return false;
 		if (fullAddress == null) {
 			if (other.fullAddress != null)
 				return false;
@@ -92,13 +97,7 @@ public class Customer extends TypicalGenericModel{
 				return false;
 		} else if (!id.equals(other.id))
 			return false;
-		if (sellerName == null) {
-			if (other.sellerName != null)
-				return false;
-		} else if (!sellerName.equals(other.sellerName))
-			return false;
 		return true;
 	}
-	
-	
+
 }

@@ -11,10 +11,10 @@
 	<bean id="storeService" class="com.app.gh.service.service.impl.StoreServiceImpl" />
 	<bean id="stockService" class="com.app.gh.service.service.impl.StockServiceImpl" />
 	<bean id="suplierService" class="com.app.gh.service.service.impl.SuplierServiceImpl" />
-	<!-- 
 	<bean id="customerService" class="com.app.gh.service.service.impl.CustomerServiceImpl" />
-	<bean id="orderService" class="com.app.gh.service.service.impl.OrderServiceImpl" />
 	<bean id="sellerService" class="com.app.gh.service.service.impl.SellerServiceImpl" />
+	<!-- 
+	<bean id="orderService" class="com.app.gh.service.service.impl.OrderServiceImpl" />
 	<bean id="transactionCodeService" class="com.app.gh.service.service.impl.TransactionCodeServiceImpl" />
 	<bean id="transactionService" class="com.app.gh.service.service.impl.TransactionServiceImpl" />
 	-->

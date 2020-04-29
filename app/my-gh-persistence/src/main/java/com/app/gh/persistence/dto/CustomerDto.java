@@ -7,7 +7,7 @@ public class CustomerDto {
 	private Long id;
 	
 	@IsRequired
-	private String sellerName;
+	private String customerName;
 	
 	@IsRequired
 	private String fullAddress;
@@ -22,13 +22,13 @@ public class CustomerDto {
 	public void setId(Long id) {
 		this.id = id;
 	}
-
-	public String getSellerName() {
-		return sellerName;
+	
+	public String getCustomerName() {
+		return customerName;
 	}
 
-	public void setSellerName(String sellerName) {
-		this.sellerName = sellerName;
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
 	}
 
 	public String getFullAddress() {
@@ -49,9 +49,8 @@ public class CustomerDto {
 
 	@Override
 	public String toString() {
-		return "CustomerDto [id=" + id + ", sellerName=" + sellerName + ", fullAddress=" + fullAddress + ", storeId="
-				+ storeId + "]";
+		return "CustomerDto [id=" + id + ", customerName=" + customerName + ", fullAddress=" + fullAddress
+				+ ", storeId=" + storeId + "]";
 	}
-	
-	
+
 }
