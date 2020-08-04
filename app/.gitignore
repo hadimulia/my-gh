@@ -22,10 +22,10 @@ my-gh/target
 my-gh/gen
 /bin
 /target
-*pom.properties
-*.iml
-*.settings*
-*.classpath
+pom.properties
+.iml
+.settings*
+.classpath
 *.project
 *.springBeans
 *.jasper
